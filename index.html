@@ -5,11 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>HBD UMAAA 🎉️</title>
     <link rel="shortcut icon" href="/hbd-uma/assets/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/hbd-uma/style/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="bg-slate-200">
-    <audio controls autoplay loop class="hidden">
-      <source src="/hbd-uma/assets/Happy Birthday SLOW BEGINNER PIANO TUTORIAL SHEET MUSIC by Betacustic.mp3" type="audio/mpeg">
+  <body class="bg-slate-200 h-screen overflow-hidden">
+    <div id="shade" class="h-screen w-screen absolute z-50 top-0 bg-black flex justify-center items-center">
+      <button class="bg-red-600 hover:bg-red-500 text-slate-100 hover:text-white duration-500 font-bold text-3xl py-4 px-8 rounded-2xl" onclick="play()">Play</button>
+    </div>
+    <audio id="bg-sound" class="hidden" controls loop>
+      <source
+        src="/hbd-uma/assets/Happy Birthday SLOW BEGINNER PIANO TUTORIAL SHEET MUSIC by Betacustic.mp3"
+        type="audio/mpeg"
+      />
     </audio>
     <section class="p-1 lg:p-4 flex flex-col gap-10 lg:gap-8">
       <div class="flex items-center justify-center gap-8 h-screen">
@@ -84,5 +91,6 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.12.0/tsparticles.confetti.bundle.min.js"></script>
     <script src="/hbd-uma/script/confetti.js"></script>
+    <script src="/hbd-uma/script/autoplay.js"></script>
   </body>
 </html>
